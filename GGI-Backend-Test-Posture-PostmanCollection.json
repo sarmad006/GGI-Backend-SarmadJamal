@@ -1,0 +1,105 @@
+{
+	"info": {
+		"_postman_id": "671dbc1a-26b5-47c4-bc41-ae386686ae7e",
+		"name": "GoldenGate",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18881677"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/chat",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"question\":\"What is the capital of France?\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/chat",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"chat"
+					]
+				},
+				"description": "Generated from cURL: curl -X POST http://localhost:3000/chat \\\r\n  -H \"Content-Type: application/json\" \\\r\n  -d '{\"question\":\"What is the capital of France?\"}'\r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/subscriptions",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"tier\":\"BASIC\",\"maxMessages\":10,\"billingCycle\":\"MONTHLY\",\"autoRenew\":true}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/subscriptions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"subscriptions"
+					]
+				},
+				"description": "Generated from cURL: curl -X POST http://localhost:3000/subscriptions \\\r\n  -H \"Content-Type: application/json\" \\\r\n  -d '{\"tier\":\"Basic\",\"maxMessages\":10,\"billingCycle\":\"monthly\",\"autoRenew\":true}'\r\n"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/subscriptions/<subscriptionId>/cancel",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/subscriptions/<subscriptionId>/cancel",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"subscriptions",
+						"<subscriptionId>",
+						"cancel"
+					]
+				},
+				"description": "Generated from cURL: curl -X POST http://localhost:3000/subscriptions/<subscriptionId>/cancel \\\r\n  -H \"Content-Type: application/json\"\r\n"
+			},
+			"response": []
+		}
+	]
+}
